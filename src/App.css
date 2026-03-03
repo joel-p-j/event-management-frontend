@@ -1,0 +1,5 @@
+.app-blur {
+  filter: blur(6px);
+  pointer-events: none;
+  transition: filter 0.25s ease;
+}
