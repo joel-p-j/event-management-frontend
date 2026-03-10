@@ -60,14 +60,10 @@ function EventDetails() {
           {/* EVENT IMAGE */}
           <div className="lg:col-span-2">
            <img
-              src={
-                event.event_image
-                  ? `http://127.0.0.1:8000${event.event_image}`
-                  : "/placeholder-event.jpg"
-              }
-              alt={event.title}
-              className="w-full h-[420px] object-cover rounded-xl"
-            />
+  src={event.event_image ? event.event_image : "/placeholder-event.jpg"}
+  alt={event.title}
+  className="w-full h-[420px] object-cover rounded-xl"
+/>
 
           </div>
 
