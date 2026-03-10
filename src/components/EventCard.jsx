@@ -9,9 +9,10 @@ function EventCard({ event, navigate }) {
       className="cursor-pointer bg-white rounded-2xl overflow-hidden border hover:shadow-xl transition"
     >
       <img
-        src={`http://127.0.0.1:8000${event.event_image}`}
-        className="w-full h-[340px] object-cover"
-      />
+  src={event.event_image || "/placeholder-event.jpg"}
+  alt={event.title}
+  className="w-full h-[340px] object-cover"
+/>
 
       <div className="p-4">
         <h2 className="font-semibold line-clamp-2">{event.title}</h2>
