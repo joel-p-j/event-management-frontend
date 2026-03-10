@@ -66,7 +66,11 @@ export default function HostEvent() {
 
       if (eventImage) data.append("event_image", eventImage);
 
-      const res = await api.post("/events/create/", data);
+      const res = await api.post("/events/create/", data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       setEventId(res.data.id);
 
       toast.success("Event submitted for admin approval ⏳");
@@ -169,6 +173,8 @@ export default function HostEvent() {
 
             <input
               type="file"
+              name="event_image"
+              accept="image/*"
               onChange={(e) => setEventImage(e.target.files[0])}
             />
 
