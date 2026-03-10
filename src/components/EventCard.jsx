@@ -8,8 +8,8 @@ function EventCard({ event, navigate }) {
       onClick={() => navigate(`/events/${event.id}`)}
       className="cursor-pointer bg-white rounded-2xl overflow-hidden border hover:shadow-xl transition"
     >
-      <img
-  src={event.event_image || "/placeholder-event.jpg"}
+<img
+  src={event.event_image_url || "/placeholder-event.jpg"}
   alt={event.title}
   className="w-full h-[340px] object-cover"
 />
