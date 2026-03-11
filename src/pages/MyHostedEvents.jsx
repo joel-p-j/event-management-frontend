@@ -90,7 +90,7 @@ export default function MyHostedEvents() {
     });
     setPreviewImage(
       event.event_image
-        ? `http://127.0.0.1:8000${event.event_image}`
+        ? `${event.event_image_url}`
         : null
     );
     setEditImage(null);
