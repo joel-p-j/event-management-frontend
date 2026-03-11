@@ -43,7 +43,7 @@ export default function HeroCarousel({ events }) {
 <div
   className="absolute inset-0 bg-cover bg-center"
   style={{
-    backgroundImage: `url(${event.event_image})`,
+    backgroundImage: `url(${event.event_image_url})`,
     filter: "blur(4px)",
 
     WebkitMaskImage: `
@@ -134,7 +134,7 @@ export default function HeroCarousel({ events }) {
             {/* RIGHT POSTER */}
             <div className="hidden min-[840px]:block">
               <img
-                src={`${event.event_image}`}
+                src={`${event.event_image_url}`}
                 alt={event.title}
                 className="
                   w-[220px] xl:w-[260px]
