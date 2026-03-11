@@ -198,9 +198,9 @@ export default function MyHostedEvents() {
               key={event.id}
               className="bg-white rounded-xl border shadow-sm p-4 mb-5 flex flex-col sm:flex-row gap-4"
             >
-              {event.event_image && (
+              {event.event_image_url && (
                 <img
-                  src={`http://127.0.0.1:8000${event.event_image}`}
+                  src={`${event.event_image_url}`}
                   className="w-full sm:w-44 h-40 sm:h-32 object-cover rounded-lg"
                 />
               )}
